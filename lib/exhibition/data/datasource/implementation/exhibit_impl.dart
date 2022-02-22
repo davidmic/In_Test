@@ -6,7 +6,6 @@ class RestExhibitsLoader implements ExhibitsLoader {
   final ApiClient _apiClient;
   RestExhibitsLoader(this._apiClient);
   Future<List<Exhibit>> getExhibitList() async {
-    // final _apiClient = Dio();
     String url = "https://my-json-server.typicode.com/Reyst/exhibit_db/list";
     final res = await _apiClient.dio.get(url);
     List<dynamic> data = res.data;
